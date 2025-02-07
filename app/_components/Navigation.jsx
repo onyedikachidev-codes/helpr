@@ -77,10 +77,19 @@ function Navigation() {
           </li>
         </ul>
 
-        <div className={`${mons.className} `}>
-          <button className="py-[0.4rem] bg-gray-200 hover:bg-gray-300 px-7 rounded-sm text-base border border-gray-600 text-gray-900">
+        <div className={`${mons.className} flex gap-4`}>
+          <Link
+            href="/signup"
+            className="py-[0.4rem] bg-gray-200 hover:bg-gray-300 px-7 rounded-md text-base border border-gray-600 text-gray-900"
+          >
             Register
-          </button>
+          </Link>
+          <Link
+            href="/signin"
+            className="py-[0.4rem] bg-gray-700 hover:bg-gray-600 px-7 rounded-md text-base border border-gray-300 text-gray-100"
+          >
+            Login
+          </Link>
         </div>
       </div>
 
