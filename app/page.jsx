@@ -16,6 +16,9 @@ import patient2 from "@/public/patient2.jpg";
 import patient3 from "@/public/patient3.jpg";
 import patient4 from "@/public/cancer.jpg";
 import patient5 from "@/public/patient5.jpg";
+import tap from "@/public/tap.jpg";
+import children from "@/public/children.jpg";
+import animal from "@/public/animal.jpg";
 
 import Header from "@/app/_components/Header";
 import Button from "@/app/_components/Button";
@@ -77,7 +80,7 @@ export default function Page() {
               title="Create Your Campaign"
               description="Set up your project. Add details, images, and a funding goal to tell your story."
               buttonText="Start Now"
-              buttonLink="/create-campaign"
+              buttonLink="/"
             />
 
             {/* Card 2 */}
@@ -86,7 +89,7 @@ export default function Page() {
               title="Share with Your Network"
               description="Spread the word! Share your campaign on social media, email, and with friends."
               buttonText="Share Tips"
-              buttonLink="/share-tips"
+              buttonLink="/"
             />
 
             {/* Card 3 */}
@@ -95,7 +98,7 @@ export default function Page() {
               title="Reach Your Goal"
               description="Watch your funding grow as supporters back your project. Bring your idea to life!"
               buttonText="Explore Success Stories"
-              buttonLink="/success-stories"
+              buttonLink="/"
             />
           </div>
         </div>
@@ -198,10 +201,10 @@ export default function Page() {
                 <Image
                   src={patient5}
                   alt="Patient in hospital"
-                  height={40}
-                  width={40}
+                  height={200}
+                  width={200}
                   quality={90}
-                  className="w-[30rem] h-[20rem] rounded-lg group-hover:scale-105"
+                  className="w-full rounded-lg group-hover:scale-105"
                 />
                 {/* Donations Counter */}
                 <div className="absolute bottom-2 left-2 rounded-full bg-gray-800 bg-opacity-75 px-2 py-1 text-sm text-white">
@@ -211,21 +214,19 @@ export default function Page() {
 
               {/* Caption */}
               <p className="mt-4 text-lg font-semibold text-gray-800">
-                Please help Jason Mamoush
+                Help us save Maicon
               </p>
 
               <p className="mt-2 text-slate-500">
-                He is suffering from severe brain damage and memory loss and
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                totam dignissimos eaque earum deserunt voluptate architecto,
-                quasi quod iusto ipsa. Laudantium atque quas eius distinctio
-                nihil reprehenderit ipsa expedita alias!
+                He is suffering from severe brain damage and memory loss. The
+                cost of brain surgery, along with pre- and post-operative care,
+                is overwhelming.
               </p>
 
-              <div className="mt-8">
-                <Progress />
+              <div className="mt-4">
+                <Progress val={96} />
                 <p className="mt-2 text-lg font-semibold text-black">
-                  $65,000 raised
+                  $165,000 raised
                 </p>
               </div>
             </div>
@@ -237,26 +238,26 @@ export default function Page() {
                   <Image
                     src={patient4}
                     alt="Patient in hospital"
-                    height={50}
-                    width={50}
+                    height={200}
+                    width={200}
                     quality={100}
                     className="w-full rounded-lg group-hover:scale-105"
                   />
                   {/* Donations Counter */}
                   <div className="absolute bottom-2 left-2 rounded-full bg-gray-800 bg-opacity-75 px-2 py-1 text-sm text-white">
-                    1.3K donations
+                    12.9K donations
                   </div>
                 </div>
 
                 {/* Caption */}
                 <p className="mt-2 text-lg font-semibold text-gray-800">
-                  Urgent help for Kudus
+                  Support Sarah’s Fight Against Cancer
                 </p>
 
                 <div className="mt-2">
-                  <Progress val={90} />
+                  <Progress val={70} />
                   <p className="mt-1 text-lg font-semibold text-black">
-                    $23,000 raised
+                    $93,239 raised
                   </p>
                 </div>
               </div>
@@ -264,27 +265,27 @@ export default function Page() {
                 {/* Image Container */}
                 <div className="relative">
                   <Image
-                    src={patient2}
+                    src={animal}
                     alt="Patient in hospital"
-                    height={50}
-                    width={50}
+                    height={200}
+                    width={200}
                     className="w-full rounded-lg group-hover:scale-105"
                   />
                   {/* Donations Counter */}
                   <div className="absolute bottom-2 left-2 rounded-full bg-gray-800 bg-opacity-75 px-2 py-1 text-sm text-white">
-                    2.3K donations
+                    3.3K donations
                   </div>
                 </div>
 
                 {/* Caption */}
                 <p className="mt-2 text-lg font-semibold text-gray-800">
-                  Please help Abigail Simi
+                  Please, save Our Local Animal Shelter
                 </p>
 
                 <div className="mt-2">
-                  <Progress val={20} />
+                  <Progress val={10} />
                   <p className="mt-1 text-lg font-semibold text-black">
-                    $12,000 raised
+                    $10,569 raised
                   </p>
                 </div>
               </div>
@@ -295,55 +296,56 @@ export default function Page() {
                 {/* Image Container */}
                 <div className="relative">
                   <Image
-                    src={patient1}
+                    src={tap}
                     alt="Patient in hospital"
-                    height={50}
-                    width={50}
-                    className="h-[12rem] w-[18rem] rounded-lg group-hover:scale-105"
-                  />
-                  {/* Donations Counter */}
-                  <div className="absolute bottom-2 left-2 rounded-full bg-gray-800 bg-opacity-75 px-2 py-1 text-sm text-white">
-                    13.1K donations
-                  </div>
-                </div>
-
-                {/* Caption */}
-                <p className="mt-2 text-lg font-semibold text-gray-800">
-                  Please help John
-                </p>
-
-                <div className="mt-2">
-                  <Progress val={70} />
-                  <p className="mt-1 text-lg font-semibold text-black">
-                    $35,000 raised
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col rounded-lg bg-white p-4 shadow-lg relative group">
-                {/* Image Container */}
-                <div className="relative">
-                  <Image
-                    src={patient3}
-                    alt="Patient in hospital"
-                    height={50}
-                    width={50}
+                    height={200}
+                    width={200}
                     className="w-full rounded-lg group-hover:scale-105"
                   />
                   {/* Donations Counter */}
                   <div className="absolute bottom-2 left-2 rounded-full bg-gray-800 bg-opacity-75 px-2 py-1 text-sm text-white">
-                    1.9K donations
+                    12.9K donations
                   </div>
                 </div>
 
                 {/* Caption */}
                 <p className="mt-2 text-lg font-semibold text-gray-800">
-                  Support for Moses
+                  Help Us Bring Clean Water to Rural area India
+                </p>
+
+                <div className="mt-4">
+                  <Progress val={50} />
+                  <p className="mt-1 text-lg font-semibold text-black">
+                    $23,970 raised
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col rounded-lg bg-white p-4 shadow-lg relative group">
+                {/* Image Container */}
+                <div className="relative">
+                  <Image
+                    src={children}
+                    alt="Patient in hospital"
+                    height={200}
+                    width={200}
+                    className="w-full rounded-lg group-hover:scale-105"
+                  />
+                  {/* Donations Counter */}
+                  <div className="absolute bottom-2 left-2 rounded-full bg-gray-800 bg-opacity-75 px-2 py-1 text-sm text-white">
+                    26.4K donations
+                  </div>
+                </div>
+
+                {/* Caption */}
+                <p className="mt-2 text-lg font-semibold text-gray-800">
+                  Help Us Build a Future for Street Children in Nairobi
                 </p>
 
                 <div className="mt-2">
-                  <Progress val={50} />
+                  <Progress val={90} />
                   <p className="mt-1 text-lg font-semibold text-black">
-                    $5,000 raised
+                    $65,000 raised
                   </p>
                 </div>
               </div>

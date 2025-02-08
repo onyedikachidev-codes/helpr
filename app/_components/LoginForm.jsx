@@ -1,11 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import love from "@/public/love.jpg";
 
 import { IoArrowBackCircle } from "react-icons/io5";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useState } from "react";
+import SocialSignIn from "./Social";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ function LoginForm() {
         </p>
 
         <form className="-translate-y-[2.5rem]">
-          <div className=" mt-6 flex flex-col gap-4">
+          <div className=" mt-6 flex flex-col gap-2">
             <div className="mb-4">
               <label
                 htmlFor="email"
@@ -40,7 +41,7 @@ function LoginForm() {
                 placeholder="Enter your email"
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-[100%] rounded-lg border border-blue-300 bg-blue-100 p-[0.625rem] text-base text-[#06080B] placeholder-gray-600 outline-none"
+                className="w-[100%] rounded-lg border border-blue-300 bg-blue-100 p-[0.625rem] text-sm text-[#06080B] placeholder-gray-600 outline-none"
               />
             </div>
 
@@ -59,7 +60,7 @@ function LoginForm() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-[100%] rounded-lg border border-blue-300 bg-blue-100 p-[0.625rem] text-base placeholder-gray-600 outline-none"
+                  className="w-[100%] rounded-lg border border-blue-300 bg-blue-100 p-[0.625rem] text-sm placeholder-gray-600 outline-none"
                 />
                 <div
                   onClick={() => togglePasswordVisibility()}
@@ -79,7 +80,7 @@ function LoginForm() {
             <p className=" text-blue-600 text-lg">Forgot Password?</p>
           </div>
 
-          <div className="mx-auto mt-12 flex w-[70%] flex-col items-center justify-center gap-3">
+          <div className="mx-auto mt-4 flex w-[70%] flex-col items-center justify-center gap-3">
             <button
               type="submit"
               className="ml-[20%] mt-4 inline-block w-11/12 rounded bg-blue-600 py-3 text-center text-sm font-semibold uppercase text-stone-300 hover:bg-blue-500 sm:mr-10"
@@ -88,6 +89,8 @@ function LoginForm() {
             </button>
           </div>
         </form>
+
+        <SocialSignIn />
       </div>
     </div>
   );

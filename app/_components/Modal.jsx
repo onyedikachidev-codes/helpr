@@ -3,7 +3,7 @@
 import { cloneElement, createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
-import { useOutsideClick } from "./_hooks/OutsideClick";
+import { useOutsideClick } from "@/app/_hooks/OutsideClick";
 
 const ModalContext = createContext();
 
@@ -17,7 +17,7 @@ function Overlay({ children }) {
 
 function StyledDiv({ children }) {
   return (
-    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg px-16 py-12 transition-all duration-500">
+    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg px-16 pt-12 transition-all duration-500">
       {children}
     </div>
   );
