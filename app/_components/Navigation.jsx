@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import bg from "@/public/logo.png";
 import Button from "./Button";
 import Logo from "./Logo";
+import Login from "./Login";
+import Signup from "./Signup";
 
 const mons = Montserrat({
   subsets: ["latin"],
@@ -78,18 +80,12 @@ function Navigation() {
         </ul>
 
         <div className={`${mons.className} flex gap-4`}>
-          <Link
-            href="/signup"
-            className="py-[0.4rem] bg-gray-200 hover:bg-gray-300 px-7 rounded-md text-base border border-gray-600 text-gray-900"
-          >
-            Register
-          </Link>
-          <Link
-            href="/signin"
-            className="py-[0.4rem] bg-gray-700 hover:bg-gray-600 px-7 rounded-md text-base border border-gray-300 text-gray-100"
-          >
-            Login
-          </Link>
+          <div className="py-[0.4rem] bg-gray-200 hover:bg-gray-300 px-7 rounded-md text-base border border-gray-600 text-gray-900">
+            <Signup />
+          </div>
+          <div className="py-[0.4rem] bg-gray-700 hover:bg-gray-600 px-7 rounded-md text-base border border-gray-300 text-gray-100">
+            <Login />
+          </div>
         </div>
       </div>
 

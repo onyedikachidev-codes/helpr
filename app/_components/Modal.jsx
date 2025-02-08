@@ -1,6 +1,6 @@
 "use client";
 
-import { cloneElement, createContext } from "react";
+import { cloneElement, createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
 import { useOutsideClick } from "./_hooks/OutsideClick";
@@ -9,7 +9,7 @@ const ModalContext = createContext();
 
 function Overlay({ children }) {
   return (
-    <div className="fixed top-0 left-0 w-full h-[90vh] z-[1000] transition-all duration-1000 backdrop-blur-sm bg-black/30">
+    <div className="fixed top-0 left-0 w-full h-[100vh] z-[1000] transition-all duration-1000 backdrop-blur-sm bg-black/30">
       {children}
     </div>
   );
@@ -17,7 +17,7 @@ function Overlay({ children }) {
 
 function StyledDiv({ children }) {
   return (
-    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-50 rounded-lg shadow-lg px-16 py-12 transition-all duration-500">
+    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg px-16 py-12 transition-all duration-500">
       {children}
     </div>
   );
