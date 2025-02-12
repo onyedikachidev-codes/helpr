@@ -10,7 +10,7 @@ function Logo() {
         quality={90}
         height={45}
         width={45}
-        className="ml-[0.83rem]"
+        className="xl:ml-[0.83rem]"
       />
       <h2 className="pl-2 pt-[.3rem] text-[1.5rem] text-blue-600 font-serif">
         Helpr

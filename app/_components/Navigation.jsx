@@ -80,10 +80,10 @@ function Navigation() {
         </ul>
 
         <div className={`${mons.className} flex gap-4`}>
-          <div className="py-[0.4rem] bg-gray-200 hover:bg-gray-300 px-7 rounded-md text-base border border-gray-600 text-gray-900">
+          <div className="hidden lg:block py-[0.4rem] bg-gray-200 hover:bg-gray-300 px-7 rounded-md text-base border border-gray-600 text-gray-900">
             <Signup />
           </div>
-          <div className="py-[0.4rem] bg-gray-700 hover:bg-gray-600 px-7 rounded-md text-base border border-gray-300 text-gray-100">
+          <div className="hidden lg:block py-[0.4rem] bg-gray-700 hover:bg-gray-600 px-7 rounded-md text-base border border-gray-300 text-gray-100">
             <Login />
           </div>
         </div>
@@ -107,46 +107,33 @@ function Navigation() {
       <div
         className={`${
           isOpen
-            ? "absolute top-[4.4rem] sm:top-[20dvh] z-100 min-h-screen w-full left-0 bg-gray-100 overflow-hidden"
+            ? "z-[10000] absolute top-[4.4rem] sm:top-[20dvh] z-100 min-h-screen w-full left-0 bg-gray-100 overflow-hidden"
             : "hidden"
         } md:hidden `}
       >
         <div className="uppercase w-full mt-6">
           <div
             onClick={() => {
-              router.push("#about");
+              router.push("/explore");
               setIsOpen(false);
             }}
             className="flex items-center justify-between hover:bg-gray-200 py-3 px-2 mx-5 rounded-md text-lg font-medium w-[90%] border-b border-gray-700"
           >
-            <Link href="#about" onClick={() => setIsOpen(false)}>
-              About
+            <Link href="/explore" onClick={() => setIsOpen(false)}>
+              Explore
             </Link>
             <FaChevronRight className="text-lg text-[#06080B] lg:hidden" />
           </div>
 
           <div
             onClick={() => {
-              router.push("#skills");
+              router.push("/about");
               setIsOpen(false);
             }}
             className="flex items-center justify-between hover:bg-gray-200 py-3 px-2 mx-5 rounded-md text-lg font-medium w-[90%] border-b border-gray-700"
           >
-            <Link href="#skills" onClick={() => setIsOpen(false)}>
-              Skills
-            </Link>
-            <FaChevronRight className="text-lg text-[#06080B] lg:hidden" />
-          </div>
-
-          <div
-            onClick={() => {
-              router.push("#projects");
-              setIsOpen(false);
-            }}
-            className="flex items-center justify-between hover:bg-gray-200 py-3 px-2 mx-5 rounded-md text-lg font-medium w-[90%] border-b border-gray-700"
-          >
-            <Link href="#projects" onClick={() => setIsOpen(false)}>
-              Projects
+            <Link href="/about" onClick={() => setIsOpen(false)}>
+              About us
             </Link>
             <FaChevronRight className="text-lg text-[#06080B] lg:hidden" />
           </div>
@@ -162,7 +149,7 @@ function Navigation() {
               href="mailto:nwangumabimma@gmail.com"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              Contact us
             </Link>
             <FaChevronRight className="text-lg text-[#06080B] lg:hidden" />
           </div>
