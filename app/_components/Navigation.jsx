@@ -47,7 +47,7 @@ function Navigation() {
 
       <div className="flex justify-between gap-24">
         <ul
-          className={`${mons.className} md:flex hidden items-center gap-8 text-xl text-black`}
+          className={`${mons.className} lg:flex hidden items-center gap-8 text-xl text-black`}
         >
           <li>
             <Link href="/explore" className="relative group">
@@ -89,7 +89,7 @@ function Navigation() {
         </div>
       </div>
 
-      <div className="md:hidden ">
+      <div className="lg:hidden ">
         <button onClick={toggleMenu}>
           <GiHamburgerMenu
             className={`${
@@ -107,17 +107,17 @@ function Navigation() {
       <div
         className={`${
           isOpen
-            ? "z-[10000] absolute top-[4.4rem] sm:top-[20dvh] z-100 min-h-screen w-full left-0 bg-gray-100 overflow-hidden"
+            ? "z-[10000] absolute top-[4.4rem] sm:top-[20dvh] md:top-[8dvh] min-h-screen w-full left-0 bg-gray-200 overflow-hidden"
             : "hidden"
-        } md:hidden `}
+        } lg:hidden `}
       >
-        <div className="uppercase w-full mt-6">
+        <div className="uppercase w-full mt-6 md:ml-3 md:mt-10">
           <div
             onClick={() => {
               router.push("/explore");
               setIsOpen(false);
             }}
-            className="flex items-center justify-between hover:bg-gray-200 py-3 px-2 mx-5 rounded-md text-lg font-medium w-[90%] border-b border-gray-700"
+            className="flex items-center justify-between hover:bg-gray-100 py-3 px-2 mx-5 text-lg font-medium w-[90%] border-b border-gray-700"
           >
             <Link href="/explore" onClick={() => setIsOpen(false)}>
               Explore
@@ -130,7 +130,7 @@ function Navigation() {
               router.push("/about");
               setIsOpen(false);
             }}
-            className="flex items-center justify-between hover:bg-gray-200 py-3 px-2 mx-5 rounded-md text-lg font-medium w-[90%] border-b border-gray-700"
+            className="flex items-center justify-between hover:bg-gray-100 py-3 px-2 mx-5 text-lg font-medium w-[90%] border-b border-gray-700"
           >
             <Link href="/about" onClick={() => setIsOpen(false)}>
               About us
@@ -143,7 +143,7 @@ function Navigation() {
               handleButtonClick();
               setIsOpen(false);
             }}
-            className="flex items-center justify-between hover:bg-gray-200 py-3 px-2 mx-5 rounded-md text-lg font-medium w-[90%] "
+            className="flex items-center justify-between hover:bg-gray-100 py-3 px-2 mx-5 text-lg font-medium w-[90%] "
           >
             <Link
               href="mailto:nwangumabimma@gmail.com"
@@ -152,6 +152,25 @@ function Navigation() {
               Contact us
             </Link>
             <FaChevronRight className="text-lg text-[#06080B] lg:hidden" />
+          </div>
+        </div>
+
+        <div className="max-w-[60%] md:max-w-[40%] mx-auto mt-10 md:mt-20 flex flex-col gap-3 md:gap-5">
+          <div
+            onClick={() => {
+              setIsOpen(false);
+            }}
+            className="py-3 text-center bg-gray-200 hover:bg-gray-300 px-7 rounded-md text-lg border border-gray-600 text-gray-900"
+          >
+            <Signup />
+          </div>
+          <div
+            onClick={() => {
+              setIsOpen(false);
+            }}
+            className="py-4 text-center  bg-gray-700 hover:bg-gray-600 px-7 rounded-md text-lg border border-gray-300 text-gray-100"
+          >
+            <Login />
           </div>
         </div>
       </div>

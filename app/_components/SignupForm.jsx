@@ -23,7 +23,7 @@ function SignupForm() {
   };
 
   return (
-    <div className="w-[20rem]">
+    <div className="">
       <div className="w-full">
         <p className="mb-4 ml-[3%] mt-6 text-xl font-semibold -translate-y-[3.1rem] -translate-x-10">
           Create an account
@@ -114,7 +114,7 @@ function SignupForm() {
           <div className="mt-6 flex flex-col items-center justify-center gap-3 lg:mb-2">
             <button
               type="submit"
-              className="ml-[20%] mt-4 inline-block w-11/12 rounded bg-blue-600 py-3 text-center text-sm font-semibold uppercase text-stone-300 hover:bg-blue-500 sm:mr-10"
+              className="xl:ml-[13%] md:ml-[13%] mt-4 inline-block w-10/12 md:w-8/12 xl:w-8/12 rounded bg-blue-600 py-3 text-center text-sm font-semibold uppercase text-stone-300 hover:bg-blue-500 sm:mr-10"
             >
               register
             </button>

@@ -5,7 +5,7 @@ import support from "@/public/couples.jpg";
 
 function Fundraisers({ children, donations, title, val, amount }) {
   return (
-    <div className="mb-5 ml-[5%] flex w-[90%] cursor-pointer gap-6 rounded-3xl hover:bg-[#e4f1ff]">
+    <div className="mb-5 ml-[5%] flex w-[90%] md:w-full  cursor-pointer gap-6 rounded-3xl hover:bg-[#e4f1ff]">
       <div>{children}</div>
       <div className="w-[68%]">
         <p className="font mt-1 font-light text-[#06080B]">

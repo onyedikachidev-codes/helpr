@@ -19,10 +19,10 @@ function LoginForm() {
   };
 
   return (
-    <div className="w-[20rem] ">
+    <div className="w-full">
       <div className="w-full">
         <p className="mb-4 ml-[3%] mt-6 text-xl font-semibold -translate-y-[3.1rem] -translate-x-10">
-          Login to your account
+          Login <span className="hidden md:inline">to your account</span>
         </p>
 
         <form className="-translate-y-[2.5rem]">
@@ -83,7 +83,7 @@ function LoginForm() {
           <div className="mx-auto mt-4 flex w-[70%] flex-col items-center justify-center gap-3">
             <button
               type="submit"
-              className="ml-[20%] mt-4 inline-block w-11/12 rounded bg-blue-600 py-3 text-center text-sm font-semibold uppercase text-stone-300 hover:bg-blue-500 sm:mr-10"
+              className="ml[16%] md:ml-[20%] mt-4 inline-block w-11/12 rounded bg-blue-600 py-3 text-center text-sm font-semibold uppercase text-stone-300 hover:bg-blue-500 sm:mr-10"
             >
               Login
             </button>

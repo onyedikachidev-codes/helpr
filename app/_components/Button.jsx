@@ -31,7 +31,7 @@ function Button({ children, onClick, type }) {
       " w-full bg-stone-200 text-stone-700 mt-3 border border-blue-400 hover:bg-stone-300",
     exploreMore:
       base +
-      " lg:w-[44%] w-[76%] bg-blue-700 text-stone-300 lg:mx-[28%] mx-[12%] mt-8  hover:bg-blue-600",
+      " md:w-[44%] w-[76%] bg-blue-700 text-stone-300 md:mx-[28%] mx-[12%] mt-8  hover:bg-blue-600",
   };
   return (
     <button onClick={onClick} className={styles[type]}>

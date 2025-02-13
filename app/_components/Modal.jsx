@@ -9,7 +9,7 @@ const ModalContext = createContext();
 
 function Overlay({ children }) {
   return (
-    <div className="fixed top-0 left-0 w-full h-[100vh] z-[1000] transition-all duration-1000 backdrop-blur-sm bg-black/30">
+    <div className="fixed top-0 left-0 w-full h-[100vh] z-[20000] transition-all duration-1000 backdrop-blur-sm bg-black/30">
       {children}
     </div>
   );
@@ -17,7 +17,7 @@ function Overlay({ children }) {
 
 function StyledDiv({ children }) {
   return (
-    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg px-16 pt-12 transition-all duration-500">
+    <div className="fixed top-1/2 lg:left-[50%] xl:left-[50%] xl:right-[10%] left-3 right-3 lg:right-0 md:left-24 md:right-24 lg:-translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg px-16 pt-12 transition-all duration-500">
       {children}
     </div>
   );

@@ -39,14 +39,14 @@ export default function Page() {
         />
         <Header />
 
-        <div className="flex items-center mx-auto md:mt-10">
+        <div className="flex items-center mx-auto md:mt-10 lg:mt-20 xl:mt-10">
           <p className="mx-auto mt-8 rounded-full border border-stone-600 px-6 py-2 text-center tracking-tight text-stone-900 ">
             For individuals,{" "}
             <span className="hidden md:inline">businesses</span> and NGOs
           </p>
         </div>
 
-        <div className="mt-14 xl:ml-[13rem] ml-12 xl:max-w-72 xl:text-6xl text-4xl font-normal font-serif leading-tight text-[#06080B] md:mt-16">
+        <div className="mt-14 md:mt-32 lg:mt-48 xl:mt-16 xl:ml-[13rem] md:ml-[6.3rem] ml-12 lg:max-w-72 lg:text-6xl text-4xl font-normal font-serif leading-tight text-[#06080B] ">
           <div className="flex gap-3">
             <span>Spread</span>
             <span className="bg-gradient-to-r from-pink-500 via-red-500 to-red-700 bg-clip-text text-transparent">
@@ -57,23 +57,23 @@ export default function Page() {
           <span>giving</span>
         </div>
 
-        <p className="mt-7 xl:max-w-96 max-w-72 text-gray-700 xl:ml-[13rem] ml-12">
+        <p className="mt-7 lg:mt-10 xl:mt-7 lg:max-w-96 max-w-72 text-gray-700 xl:ml-[13rem] md:ml-[6.3rem] ml-12 lg:text-xl xl:text-lg">
           Helpr gives you a platform to spread love and change the world.
         </p>
 
-        <div className="mt-20 flex flex-col gap-3 md:mt-12 md:flex-row md:gap-6 xl:ml-[13rem] ml-12 mr-8 md:mr-0">
+        <div className="mt-20 md:mt-32 lg:mt-20 flex flex-col gap-3 xl:mt-12 md:ml-[6.3rem] lg:flex-row lg:gap-6 xl:ml-[13rem] ml-12 mr-8 md:mr-0">
           <Button type="squareStart">Start a Fundraiser</Button>
           <Button type="squareWhite">Donate to a Fundraiser</Button>
         </div>
       </section>
 
       <section className="pb-7 pt-4 text-[#252525] min-h-screen">
-        <h2 className="mt-6 text-center xl:text-3xl text-2xl mx-2 xl:mx-0 font-semibold">
+        <h2 className="mt-6 text-center md:text-3xl text-2xl mx-2 xl:mx-0 font-semibold">
           Your Journey to Making an Impact
         </h2>
 
         <div className="mt-9 mx-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
             <Card
               icon={<FaLightbulb />} // Replace with an icon or React component
@@ -107,7 +107,7 @@ export default function Page() {
           Why Use Helpr?
         </h2>
 
-        <div className="ml-4 flex w-[85%] flex-col items-start justify-center gap-12 md:ml-0 md:mt-20 md:w-auto md:flex-row md:items-center md:gap-8 lg:mt-12">
+        <div className="ml-4 sm:ml-12 flex w-[85%] flex-col items-start justify-center gap-12 lg:ml-0 md:mt-20 lg:w-auto lg:flex-row md:items-center md:gap-8 lg:mt-12">
           <div className="flex flex-col gap-12 lg:h-[80dvh] lg:w-[45%] lg:gap-6">
             <div className="flex items-start xl:gap-6 gap-2 ml-2 xl:ml-0 md:h-[14dvh] lg:h-[28dvh]">
               <span>
@@ -185,10 +185,10 @@ export default function Page() {
 
       <section className="pb-4">
         <div>
-          <h2 className="xl:mb-6 mb-8 mt-10 text-center text-2xl xl:text-3xl font-semibold text-[#252525]">
+          <h2 className="xl:mb-6 mb-8 mt-10 text-center text-2xl md:text-3xl font-semibold text-[#252525]">
             Ongoing Fundraisers
           </h2>
-          <div className="lg:hidden">
+          <div className="lg:hidden mx-2 sm:mx-6 md:mx-16 ">
             <Fundraisers
               amount="23,970"
               val={50}
