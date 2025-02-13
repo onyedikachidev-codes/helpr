@@ -104,7 +104,7 @@ function Page() {
               </h3>
 
               <h4 className="text-xl lg:text-2xl xl:text-xl text-gray-700 font-medium mt-[0.16rem]">
-                A Frontend Engineering Intern
+                Junior Frontend Engineer
               </h4>
               <p className="mt-5 text-gray-600 lg:text-xl xl:text-base">
                 Enthusiastic aspiring frontend developer with foundational
