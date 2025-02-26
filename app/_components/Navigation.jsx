@@ -89,27 +89,33 @@ function Navigation() {
         </div>
       </div>
 
-      <div className="lg:hidden ">
-        <button onClick={toggleMenu}>
-          <GiHamburgerMenu
-            className={`${
-              isOpen ? "hidden" : "block"
-            } h-6 w-6 text-blue-800 hover:text-blue-600`}
-          />
-          <FaTimes
-            className={`${
-              isOpen ? "block" : "hidden"
-            } h-6 w-6 text-blue-800 hover:text-blue-600`}
-          />
+      <div className="lg:hidden">
+        <button onClick={toggleMenu} className="relative h-8 w-8">
+          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300">
+            <GiHamburgerMenu
+              className={`h-6 w-6 text-blue-800 hover:text-blue-600 transform transition-all duration-300 ${
+                isOpen
+                  ? "scale-0 rotate-90 opacity-0"
+                  : "scale-100 rotate-0 opacity-100"
+              }`}
+            />
+            <FaTimes
+              className={`h-6 w-6 text-blue-800 hover:text-blue-600 absolute transform transition-all duration-300 ${
+                isOpen
+                  ? "scale-100 rotate-0 opacity-100"
+                  : "scale-0 -rotate-90 opacity-0"
+              }`}
+            />
+          </div>
         </button>
       </div>
 
       <div
-        className={`${
+        className={`absolute top-[10dvh] sm:top-[20dvh] lg:hidden w-full min-h-screen left-0  overflow-hidden p-4 transition-all duration-300 ease-in-out ${
           isOpen
-            ? "z-[10000] absolute top-[4.4rem] sm:top-[20dvh] md:top-[8dvh] min-h-screen w-full left-0 bg-gray-200 overflow-hidden"
-            : "hidden"
-        } lg:hidden `}
+            ? "translate-y-0 opacity-100 fixed inset-0 z-[200000] bg-gray-200"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        }  `}
       >
         <div className="uppercase w-full mt-6 md:ml-3 md:mt-10">
           <div
